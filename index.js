@@ -17,7 +17,15 @@ client.on("disconnect", () => {
 });
 
 help = (msg) => {
-  msg.channel.send("Add help message here...");
+  msg.channel.send(`Commands:
+  **!play [url]**
+  - Plays music from the url.
+  **!skip**
+  - Skips to the next song
+  **!end**
+  - Stops music and clears queue
+  
+  **Only _YouTube_ links are currently supported!**`);
 };
 
 client.on("message", async (msg) => {
